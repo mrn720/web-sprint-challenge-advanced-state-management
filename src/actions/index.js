@@ -9,7 +9,7 @@ export const SET_ERROR = 'SET_ERROR'
 export const fetchSmurfs = () => {
     return(dispatch) => {
         dispatch(fetchStart())
-        axios.get('https://localhost:3333/smurfs/')
+        axios.get('http://localhost:3333/smurfs/')
         .then(res => {
             dispatch(fetchSuccess(res.data))
         })
